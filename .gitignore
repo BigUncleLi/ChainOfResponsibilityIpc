@@ -10,6 +10,7 @@ tags
 
 # Eclipse setting files
 .settings/
+.metadata/
 
 # Eclipse build classpath files
 #*.classpath
