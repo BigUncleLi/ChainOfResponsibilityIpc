@@ -8,5 +8,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/Ipc"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Handler"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Engine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Command"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
