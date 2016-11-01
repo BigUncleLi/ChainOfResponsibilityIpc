@@ -13,6 +13,7 @@ public class ClickHandler extends ClientHandler {
 
 	@Override
 	public boolean handle(Command command) {
+		
 		return false;
 	}
 

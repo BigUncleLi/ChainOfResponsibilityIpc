@@ -2,23 +2,30 @@ package org.uncle.lee.ipc;
 
 import org.uncle.lee.ipc.pipeline.PipelineManager;
 
+import android.content.Context;
+
 public class IpcFactory {
 	private static IpcFactory ipcFactoryInstance;
 	private PipelineManager pipelineManager;
 	
-	private IpcFactory(){
+	private IpcFactory(Context mContext){
+		initServiceTool(mContext);
 		pipelineManager = new PipelineManager();
 	};
 	
-	public static IpcFactory getInstance(){
+	private void initServiceTool(Context mContext) {
+		ServiceTool.getInstance(mContext).connectService();
+	}
+
+	public static IpcFactory getInstance(Context mContext){
 		if(ipcFactoryInstance == null){
 			synchronized (IpcFactory.class) {
 				if(ipcFactoryInstance == null){
-					ipcFactoryInstance = new IpcFactory();
+					ipcFactoryInstance = new IpcFactory(mContext);
 				}
 			}
 		}
-		return ipcFactoryInstance;		
+		return ipcFactoryInstance;
 	}
 	
 	public PipelineManager createPipeLineManager(){
