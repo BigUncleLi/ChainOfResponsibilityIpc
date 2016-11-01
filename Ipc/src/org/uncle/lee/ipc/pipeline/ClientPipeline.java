@@ -28,8 +28,8 @@ public class ClientPipeline implements Pipeline {
 		}
 	}
 	
-	private boolean needHandle(Handler next, Command command) {
-		return false;
+	private boolean needHandle(ClientHandler next, Command command) {
+		return next.action.equals(command.getAction());
 	}
 	
 	@Override

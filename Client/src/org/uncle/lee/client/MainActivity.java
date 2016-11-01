@@ -1,8 +1,8 @@
 package org.uncle.lee.client;
 
-import org.uncle.lee.client.perference.ClientConstant;
 import org.uncle.lee.client.service.ClientService.ServcieOperator;
 import org.uncle.lee.command.client.ClickCommand;
+import org.uncle.lee.common.preference.ClientConstant;
 
 import android.app.Activity;
 import android.content.ComponentName;
