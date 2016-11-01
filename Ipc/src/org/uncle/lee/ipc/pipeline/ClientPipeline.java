@@ -9,10 +9,11 @@ import org.uncle.lee.handler.ClientHandler;
 import org.uncle.lee.handler.Handler;
 
 public class ClientPipeline implements Pipeline {
-	protected Stack<ClientHandler> handlerStack = new Stack<ClientHandler>();
+	protected Stack<ClientHandler> handlerStack;
 	private Engine engine;
 	
 	public ClientPipeline(Engine engine){
+		handlerStack = new Stack<ClientHandler>();
 		this.engine = engine;
 	}
 
@@ -20,7 +21,8 @@ public class ClientPipeline implements Pipeline {
 		Iterator<ClientHandler> iterator = handlerStack.iterator();
 		while(iterator.hasNext()){
 			ClientHandler next = iterator.next();
-			if(needHandle(next, command) && next.handle(command, engine)){
+			boolean isCommandHandled = needHandle(next, command) && next.handle(command, engine);
+			if(isCommandHandled){
 				break;
 			}
 		}
@@ -32,7 +34,6 @@ public class ClientPipeline implements Pipeline {
 	
 	@Override
 	public void add(Handler handler) {
-		
+		handlerStack.add((ClientHandler)handler);
 	}
-
 }
