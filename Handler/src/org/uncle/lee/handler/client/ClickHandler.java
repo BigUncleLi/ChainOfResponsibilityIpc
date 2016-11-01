@@ -14,8 +14,8 @@ public class ClickHandler extends ClientHandler {
 
 	@Override
 	public boolean handle(Command command, Engine engine) {
-		// TODO Auto-generated method stub
-		return false;
+		engine.doClickAction();
+		return true;
 	}
 
 }

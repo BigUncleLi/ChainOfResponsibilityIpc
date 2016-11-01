@@ -14,7 +14,8 @@ public class InitEngineHandler extends ClientHandler {
 	
 	@Override
 	public boolean handle(Command command, Engine engine) {
-		return false;
+		engine.init();
+		return true;
 	}
 
 }
