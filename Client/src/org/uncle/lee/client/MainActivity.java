@@ -41,6 +41,6 @@ public class MainActivity extends Activity {
 	};
 	
 	public void onclick(){
-		serviceOperator.requestPipeline(new ClickCommand());
+		serviceOperator.requestClientPipeline(new ClickCommand());
 	}
 }

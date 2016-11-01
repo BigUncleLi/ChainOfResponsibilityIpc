@@ -2,8 +2,8 @@
 package org.uncle.lee.client.service;
 
 import org.uncle.lee.client.boot.Bootstrap;
-import org.uncle.lee.command.Command;
 import org.uncle.lee.command.client.ClientCommand;
+import org.uncle.lee.command.client.InitEngineCommand;
 import org.uncle.lee.ipc.pipeline.PipelineManager;
 
 import android.app.Service;
@@ -19,7 +19,9 @@ public class ClientService extends Service {
 	public void onCreate() {
 		Bootstrap bootstrap = new Bootstrap();
 		bootstrap.init();
+		
 		pipelineManager = bootstrap.pipelineManager();
+		pipelineManager.clientPipeline().request(new InitEngineCommand());
 	}
 
 	@Override
@@ -28,12 +30,12 @@ public class ClientService extends Service {
 	}
 	
 	public final class ServcieOperator extends Binder{
-		public void requestPipeline(ClientCommand command){
-			ClientService.this.requestPipeline(command);
+		public void requestClientPipeline(ClientCommand command){
+			ClientService.this.requestClientPipeline(command);
 		}
 	}
 	
-	private void requestPipeline(ClientCommand command){
+	private void requestClientPipeline(ClientCommand command){
 		pipelineManager.clientPipeline().request(command);
 	}
 	
