@@ -3,7 +3,7 @@ package org.uncle.lee.client.boot;
 import org.uncle.lee.engine.Engine;
 import org.uncle.lee.engine.XEngine;
 import org.uncle.lee.handler.client.ClickHandler;
-import org.uncle.lee.handler.engine.InitDoneHandler;
+import org.uncle.lee.handler.engine.OnInitDoneHandler;
 import org.uncle.lee.ipc.IpcFactory;
 import org.uncle.lee.ipc.pipeline.Pipeline;
 import org.uncle.lee.ipc.pipeline.PipelineManager;
@@ -23,7 +23,7 @@ public class Bootstrap {
 	}
 	
 	private void initEnginePipeline(Pipeline enginePipeline) {
-		enginePipeline.add(new InitDoneHandler());
+		enginePipeline.add(new OnInitDoneHandler());
 	}
 
 	private void initClientPipeline(Pipeline clientPipeline) {

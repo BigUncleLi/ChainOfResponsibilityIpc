@@ -15,7 +15,7 @@ public abstract class Pipeline {
 		Iterator<Handler> iterator = handlerStack.iterator();
 		while(iterator.hasNext()){
 			Handler next = iterator.next();
-			if(needHandle(next) && next.handle()){
+			if(needHandle(next) && next.handle(command)){
 				break;
 			}
 		}
