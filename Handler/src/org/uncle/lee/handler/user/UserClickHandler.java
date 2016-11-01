@@ -1,4 +1,4 @@
-package org.uncle.lee.aa.handler;
+package org.uncle.lee.handler.user;
 
 import org.uncle.lee.handler.UserHandler;
 
