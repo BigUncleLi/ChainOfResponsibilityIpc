@@ -4,10 +4,9 @@ public class RealEngine {
 	private RealEngineListener listener;
 	
 	public RealEngine(){
-		init();
 	}
 	
-	private void init() {
+	public void init() {
 		// do some blocking things
 		// ...
 		listener.onInitDone();
