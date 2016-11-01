@@ -1,7 +1,5 @@
 package org.uncle.lee.client.boot;
 
-import org.uncle.lee.engine.Engine;
-import org.uncle.lee.engine.XEngineImpl;
 import org.uncle.lee.handler.client.ClickHandler;
 import org.uncle.lee.handler.client.InitEngineHandler;
 import org.uncle.lee.handler.engine.OnInitDoneHandler;
@@ -14,8 +12,7 @@ public class Bootstrap {
 	private PipelineManager pipelineManager;
 	
 	public void init(){
-		Engine engine = new XEngineImpl();
-		pipelineManager = IpcFactory.getInstance(engine).createPipeLineManager();
+		pipelineManager = IpcFactory.getInstance().createPipeLineManager();
 		
 		initClientPipeline(pipelineManager.clientPipeline());
 		initEnginePipeline(pipelineManager.enginePipeline());
