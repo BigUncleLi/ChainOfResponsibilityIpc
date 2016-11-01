@@ -8,11 +8,13 @@ import org.uncle.lee.ipc.pipeline.ClientPipeline;
 import org.uncle.lee.ipc.pipeline.Pipeline;
 import org.uncle.lee.ipc.pipeline.PipelineManager;
 
+import android.content.Context;
+
 public class Bootstrap {
 	private PipelineManager pipelineManager;
 	
-	public void init(){
-		pipelineManager = IpcFactory.getInstance().createPipeLineManager();
+	public void init(Context mContext){
+		pipelineManager = IpcFactory.getInstance(mContext).createPipeLineManager();
 		
 		initClientPipeline(pipelineManager.clientPipeline());
 		initEnginePipeline(pipelineManager.enginePipeline());

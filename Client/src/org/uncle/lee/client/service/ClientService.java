@@ -18,7 +18,7 @@ public class ClientService extends Service {
 	@Override
 	public void onCreate() {
 		Bootstrap bootstrap = new Bootstrap();
-		bootstrap.init();
+		bootstrap.init(this.getApplicationContext());
 		
 		pipelineManager = bootstrap.pipelineManager();
 		pipelineManager.clientPipeline().request(new InitEngineCommand());
