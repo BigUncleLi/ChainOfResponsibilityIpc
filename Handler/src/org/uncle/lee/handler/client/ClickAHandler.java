@@ -4,9 +4,9 @@ import org.uncle.lee.command.Command;
 import org.uncle.lee.common.preference.HandlerPereference;
 import org.uncle.lee.handler.ClientHandler;
 
-public class ClickHandler extends ClientHandler {
+public class ClickAHandler extends ClientHandler {
 	
-	public ClickHandler(){
+	public ClickAHandler(){
 		action = HandlerPereference.ACTION_CLIENT_CLICK;
 		priority = HandlerPereference.NORMAL_PRIORITY;
 	}

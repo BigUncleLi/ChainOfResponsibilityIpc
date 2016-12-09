@@ -1,6 +1,6 @@
 package org.uncle.lee.client.boot;
 
-import org.uncle.lee.handler.client.ClickHandler;
+import org.uncle.lee.handler.client.ClickAHandler;
 import org.uncle.lee.handler.client.InitEngineHandler;
 import org.uncle.lee.handler.engine.OnInitDoneHandler;
 import org.uncle.lee.ipc.IpcFactory;
@@ -30,6 +30,6 @@ public class Bootstrap {
 
 	private void initClientPipeline(ClientPipeline clientPipeline) {
 		clientPipeline.add(new InitEngineHandler());
-		clientPipeline.add(new ClickHandler());
+		clientPipeline.add(new ClickAHandler());
 	}
 }
