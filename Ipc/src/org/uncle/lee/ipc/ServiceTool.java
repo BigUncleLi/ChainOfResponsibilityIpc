@@ -72,6 +72,21 @@ public class ServiceTool {
 		public void onInitDone() throws RemoteException {
 			
 		}
+
+		@Override
+		public void onClick() throws RemoteException {
+			
+		}
+
+		@Override
+		public void onResult() throws RemoteException {
+			
+		}
+
+		@Override
+		public void onPush() throws RemoteException {
+			
+		}
 		
 	};
 }

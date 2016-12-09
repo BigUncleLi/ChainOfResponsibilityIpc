@@ -6,5 +6,7 @@ interface EngineServiceOperator {
 	void setListener(EngineServiceListener listener);
 	
 	void initEngine();
-	void doClick();
+	void doClickA();
+	void doClickB();
+	void alarm();
 }
