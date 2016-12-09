@@ -7,7 +7,7 @@ import org.uncle.lee.handler.ClientHandler;
 public class ClickAHandler extends ClientHandler {
 	
 	public ClickAHandler(){
-		action = HandlerPereference.ACTION_CLIENT_CLICK;
+		action = HandlerPereference.ACTION_CLIENT_CLICK_A;
 		priority = HandlerPereference.NORMAL_PRIORITY;
 	}
 
