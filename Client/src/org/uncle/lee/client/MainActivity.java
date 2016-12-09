@@ -1,7 +1,7 @@
 package org.uncle.lee.client;
 
 import org.uncle.lee.client.service.ClientService.ServcieOperator;
-import org.uncle.lee.command.client.ClickCommand;
+import org.uncle.lee.command.client.ClickACommand;
 import org.uncle.lee.common.preference.ClientConstant;
 
 import android.app.Activity;
@@ -41,6 +41,6 @@ public class MainActivity extends Activity {
 	};
 	
 	public void onclick(){
-		serviceOperator.requestClientPipeline(new ClickCommand());
+		serviceOperator.requestClientPipeline(new ClickACommand());
 	}
 }
