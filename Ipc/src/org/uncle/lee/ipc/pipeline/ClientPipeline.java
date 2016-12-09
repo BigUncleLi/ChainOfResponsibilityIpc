@@ -18,15 +18,14 @@ public class ClientPipeline implements Pipeline {
 		Iterator<ClientHandler> iterator = handlerStack.iterator();
 		while(iterator.hasNext()){
 			ClientHandler next = iterator.next();
-			boolean isCommandHandled = needHandle(next, command) && next.handle(command);
-			if(isCommandHandled){
+			if(needHandle(next, command)){
 				break;
 			}
 		}
 	}
 	
 	private boolean needHandle(ClientHandler next, Command command) {
-		return next.action.equals(command.getAction());
+		return next.action.equals(command.getAction()) && next.handle(command);
 	}
 	
 	@Override
