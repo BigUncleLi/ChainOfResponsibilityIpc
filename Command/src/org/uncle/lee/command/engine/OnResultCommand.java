@@ -6,7 +6,7 @@ public class OnResultCommand extends EngineCommand {
 
 	@Override
 	public String getAction() {
-		return HandlerPereference.ACTION_SERVER_ON_RESULT;
+		return HandlerPereference.ACTION_ENGINE_ON_RESULT;
 	}
 
 }

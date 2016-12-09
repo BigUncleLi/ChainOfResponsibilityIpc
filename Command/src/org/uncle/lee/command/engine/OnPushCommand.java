@@ -6,7 +6,7 @@ public class OnPushCommand extends EngineCommand {
 
 	@Override
 	public String getAction() {
-		return HandlerPereference.ACTION_SERVER_ON_PUSH;
+		return HandlerPereference.ACTION_ENGINE_ON_PUSH;
 	}
 
 }

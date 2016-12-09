@@ -6,7 +6,7 @@ public class OnInitDoneCommand extends EngineCommand{
 
 	@Override
 	public String getAction() {
-		return HandlerPereference.ACTION_SERVER_ON_INIT_DONE;
+		return HandlerPereference.ACTION_ENGINE_ON_INIT_DONE;
 	}
 
 }

@@ -7,7 +7,7 @@ import org.uncle.lee.handler.EngineHandler;
 public class OnClickHandler extends EngineHandler {
 	
 	public OnClickHandler(){
-		action = HandlerPereference.ACTION_SERVER_ON_CLICK;
+		action = HandlerPereference.ACTION_ENGINE_ON_CLICK;
 		priority = HandlerPereference.DEFAULT_PRIORITY;
 	}
 

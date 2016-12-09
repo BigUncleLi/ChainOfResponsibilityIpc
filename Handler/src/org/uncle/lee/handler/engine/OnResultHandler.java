@@ -7,7 +7,7 @@ import org.uncle.lee.handler.EngineHandler;
 public class OnResultHandler extends EngineHandler {
 	
 	public OnResultHandler(){
-		action = HandlerPereference.ACTION_SERVER_ON_RESULT;
+		action = HandlerPereference.ACTION_ENGINE_ON_RESULT;
 		priority = HandlerPereference.DEFAULT_PRIORITY;
 	}
 

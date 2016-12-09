@@ -6,7 +6,7 @@ public class OnClickCommand extends EngineCommand {
 
 	@Override
 	public String getAction() {
-		return HandlerPereference.ACTION_SERVER_ON_CLICK;
+		return HandlerPereference.ACTION_ENGINE_ON_CLICK;
 	}
 
 }
